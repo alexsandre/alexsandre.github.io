@@ -1,70 +1,107 @@
+---
+permalink: /
+---
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Alexsandre by alexsandre</title>
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script>
-	  (adsbygoogle = window.adsbygoogle || []).push({
-		google_ad_client: "ca-pub-8584177216905526",
-		enable_page_level_ads: true
-	  });
-	</script>
-  </head>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if site.title %}{{ site.title }}{% else %}{{ site.name }}{% endif %}</title>
+    <meta name="JekyllTheme" content="Fuse Core by Thomas Jensen" />
+    {% if site.robots.description %}<meta name="Description" content="{{ site.robots.description }}" />{% endif %}
+    {% if site.robots.keywords %}<meta name="Keywords" content="{{ site.robots.keywords }}" />{% endif %}
+    {% if site.robots.crawl %}<meta name="Robots" content="{{ site.robots.crawl }}" />{% endif %}
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if site.url %}<link rel="canonical" href="{{ site.url }}">{% endif %}
+    {% include analytics.html %}
 
-  <body>
-    <div id="container">
-      <div class="inner">
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="{{ site.baseurl }}/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="{{ site.baseurl }}/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="msapplication-config" content="{{ site.baseurl }}/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
-        <header>
-          <h1>Alexsandre</h1>
-          <h2>Developer</h2>
-        </header>
+    <!-- Stylesheets -->
+    {% comment %} Bootstrap should be the first stylesheet {% endcomment %}
+    <link rel="stylesheet" type="text/css" crossorigin="anonymous"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/theme.css">
+    <link rel="stylesheet" type="text/css" crossorigin="anonymous"
+          href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf">
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin">
+    
+    {% if site.ga and site.ga.cookieconsent %}
+    <!-- Cookie Consent popup to comply with EU cookie law -->
+    <link rel="stylesheet" type="text/css" crossorigin="anonymous"
+          href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"
+          integrity="sha384-AJ82o1PQz2xMlVWjJ+IdPSfyCVS/nJeYbLcpPhm/cEPrewaEdaYkaG6LCsquvogf" />
+    <script async crossorigin="anonymous"
+          src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"
+          integrity="sha384-l+e8/kt7mRYg7RUc/i3MsNwDJlWxkWkFDX10LF/iNglZLT96GBMAPrbaH2GP2lQy"></script>
+    <script>
+        window.addEventListener("load", function(){
+          window.cookieconsent.initialise({
+            "cookie": { "expiryDays": 730 },
+            "palette": {
+              "popup": { "background": "#383b75" },
+              "button": { "background": "#f1d600" }
+            },
+            "theme": "classic"
+          });
+        });
+    </script>
+    {% endif %}
+</head>
+<body class="fullscreen-background">
 
-        <!--<section id="downloads" class="clearfix">
-          <a href="https://github.com/alexsandre" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>-->
+<div class="glass-pane">
+<div class="container fuse-core-content pb-4">
 
-        <hr>
-
-        <section id="main_content">
-          <p>Currently working:</p>
-
-<p>In: Vitória/ES - Brasil</p>
-
-<p>With: </p>
-
-<ol>
-<li>Back-end: Microsoft .Net Framework(using specially C# and ASP.Net MVC), NHibernate, Oracle, SQL Server.<br>
-</li>
-<li>Front-end: Html, css, js, jquery, jquery-ui, bootstrap, AngularJS.</li>
-</ol><p>Interested in: algorithms - design patterns - good practices and more.</p>
-        </section>
-
-        <footer>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-                  <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-42664460-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
-      </div>
+<div class="row pt-sm-4">
+    <div class="col text-center"><img id="avatar" class="my-3 my-sm-4" alt="{{ site.name }}"
+        src="{% if site.avatar %}{% if site.avatar contains '://' %}{{ site.avatar }}{%
+        else %}{{ site.baseurl }}/{{ site.avatar }}{% endif %}{%
+        else %}{{ site.baseurl }}/images/avatar.svg{% endif %}"></div>
+</div>
+<div class="row">
+    <div class="col">
+        <h1 class="text-center font-weight-bold">{{ site.name }}</h1>
+        {% if site.subtitle %}<h3 class="text-center font-weight-light">{{ site.subtitle }}</h3>{% endif %}
     </div>
-  </body>
+</div>
+
+<div class="row justify-content-center links pt-1 pt-sm-2">
+{% for hash in site.links %}{% for linkInfo in hash %}{% if linkInfo[1].show %}
+    <div class="col-xs-12 col-sm-2 col-lg-1 px-3 px-sm-0 mt-2 mt-sm-3 text-sm-center"><a
+        href="{{ linkInfo[1].href }}"{% if site.ga %}
+        onclick="trackOutboundLink('{{ linkInfo[1].name }}', '{{ linkInfo[1].href }}'); return false;"
+        {% endif %}><i class="{{ linkInfo[1].icon }} fa-fw"></i>
+        <span class="d-inline d-sm-none">{{ linkInfo[1].name }}</span></a></div>
+{% endif %}{% endfor %}{% endfor %}
+</div>
+
+{% if site.extra_html %}
+<div class="row justify-content-center">
+    <div class="col mt-3 text-sm-center fuse-core-extra">{{ site.extra_html }}</div>
+</div>
+{% endif %}
+
+</div>
+</div>
+
+<footer><div class="container"><div class="row">
+    <div class="col text-center">Built on the <a href="https://github.com/tsjensen/fuse-core">Fuse Core</a>
+    Jekyll theme.</div>
+</div></div></footer>
+
+</body>
 </html>
