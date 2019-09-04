@@ -12,9 +12,9 @@ sass:
 # When modifying this file, take care to preserve the indentation. This is YAML ...
 
 # Main Headline, name required, subtitle optional
-name: Fuse Core
+name: Alexsandre Almeida
 #subtitle:
-subtitle: Frontend Developer
+subtitle: Developer
 
 # Title attribute of HTML Page, uses 'name' from above if empty
 title:
@@ -58,14 +58,9 @@ avatar: "images/avatar.jpg"
 # All the social media and other sites that we want to link to. The 'show' flag determines if the link is shown.
 # The order of this list controls the order of the links on the page. Feel free to add.
 links:
-  - xing:
-      name: Xing
-      show: false
-      href: https://www.xing.com/profile/YOUR_XING_USERNAME/
-      icon: fab fa-xing
   - linkedin:
       name: LinkedIn
-      show: false
+      show: true
       href: https://linkedin.com/in/YOUR_LINKEDIN_USERNAME/
       icon: fab fa-linkedin
   - twitter:
@@ -75,12 +70,12 @@ links:
       icon: fab fa-twitter
   - facebook:
       name: Facebook
-      show: false
+      show: true
       href: https://facebook.com/YOUR_FB_USERNAME
       icon: fab fa-facebook
   - instagram:
       name: Instagram
-      show: false
+      show: true
       href: https://instagram.com/alexsandrealmeida
       icon: fab fa-instagram
   - flickr:
@@ -88,11 +83,6 @@ links:
       show: false
       href: https://flickr.com/photos/YOUR_FLICKR_USERNAME
       icon: fab fa-flickr
-  - steam:
-      name: Steam
-      show: false
-      href: http://steamcommunity.com/id/YOUR_STEAM_CUSTOM_ID
-      icon: fab fa-steam
   - soundcloud:
       name: Soundcloud
       show: false
@@ -136,24 +126,19 @@ links:
   - blog:
       name: Blog
       show: true
-      href: http://host.domain/your_blog
+      href: http://alexsandre.com.br/blog/
       icon: fas fa-book-open
   - email:
       name: Email
       show: true
       href: mailto:alexsandrer@gmail.com
       icon: fas fa-envelope
-  - publickey:
-      name: PGP Key
-      show: true
-      href: https://pastebin.com/raw/YOUR_PUBLIC_KEY
-      icon: fas fa-key
 
 
 # Extra HTML which will be displayed below the links. Keep it short. Leave empty to disable.
-#extra_html:
-extra_html: >
-    Any (multiline) text containing simple HTML,
-    such as links or ... lorem ipsum.
+extra_html:
+#extra_html: >
+#   Any (multiline) text containing simple HTML,
+#   such as links or ... lorem ipsum.
 
 #EOF
