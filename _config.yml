@@ -68,40 +68,20 @@ links:
       show: false
       href: https://linkedin.com/in/YOUR_LINKEDIN_USERNAME/
       icon: fab fa-linkedin
-  - googleplus:
-      name: Google+
-      show: false
-      href: https://plus.google.com/+YOUR_GOOGLEPLUS_USERNAME
-      icon: fab fa-google-plus
   - twitter:
       name: Twitter
       show: true
-      href: https://twitter.com/YOUR_TWITTER_USERNAME
+      href: https://twitter.com/AlexRAlmeida
       icon: fab fa-twitter
-  - weibo:
-      name: 微博
-      show: true
-      href: https://weibo.com/YOUR_WEIBO_USERNAME
-      icon: fab fa-weibo
-  - vine:
-      name: Vine
-      show: false
-      href: https://vine.co/YOUR_VINE_USERNAME
-      icon: fab fa-vine
   - facebook:
       name: Facebook
       show: false
       href: https://facebook.com/YOUR_FB_USERNAME
       icon: fab fa-facebook
-  - vkontakte:
-      name: ВКонтакте
-      show: true
-      href: https://vk.com/YOUR_VK_USERNAME
-      icon: fab fa-vk
   - instagram:
       name: Instagram
       show: false
-      href: https://instagram.com/YOUR_INSTAGRAM_USERNAME
+      href: https://instagram.com/alexsandrealmeida
       icon: fab fa-instagram
   - flickr:
       name: Flickr
