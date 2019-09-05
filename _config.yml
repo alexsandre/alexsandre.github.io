@@ -125,7 +125,7 @@ links:
       icon: fab fa-tumblr
   - blog:
       name: Blog
-      show: true
+      show: false
       href: http://alexsandre.com.br/blog/
       icon: fas fa-book-open
   - email:
