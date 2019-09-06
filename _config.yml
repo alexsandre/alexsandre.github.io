@@ -61,7 +61,7 @@ links:
   - linkedin:
       name: LinkedIn
       show: true
-      href: https://linkedin.com/in/YOUR_LINKEDIN_USERNAME/
+      href: https://linkedin.com/in/alexsandrealmeida/
       icon: fab fa-linkedin
   - twitter:
       name: Twitter
@@ -80,8 +80,8 @@ links:
       icon: fab fa-instagram
   - flickr:
       name: Flickr
-      show: false
-      href: https://flickr.com/photos/YOUR_FLICKR_USERNAME
+      show: true
+      href: https://flickr.com/photos/alexsandrealmeida
       icon: fab fa-flickr
   - soundcloud:
       name: Soundcloud
@@ -96,7 +96,7 @@ links:
   - github:
       name: GitHub
       show: true
-      href: https://github.com/tsjensen
+      href: https://github.com/alexsandre
       icon: fab fa-github
   - codepen:
       name: CodePen
