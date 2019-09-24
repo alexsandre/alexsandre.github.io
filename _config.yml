@@ -58,11 +58,6 @@ avatar: "images/avatar.jpg"
 # All the social media and other sites that we want to link to. The 'show' flag determines if the link is shown.
 # The order of this list controls the order of the links on the page. Feel free to add.
 links:
-  - linkedin:
-      name: LinkedIn
-      show: true
-      href: https://linkedin.com/in/alexsandrealmeida/
-      icon: fab fa-linkedin
   - twitter:
       name: Twitter
       show: true
@@ -78,6 +73,16 @@ links:
       show: true
       href: https://instagram.com/alexsandrealmeida
       icon: fab fa-instagram
+  - github:
+      name: GitHub
+      show: true
+      href: https://github.com/alexsandre
+      icon: fab fa-github
+  - linkedin:
+      name: LinkedIn
+      show: true
+      href: https://linkedin.com/in/alexsandrealmeida/
+      icon: fab fa-linkedin
   - flickr:
       name: Flickr
       show: true
@@ -93,11 +98,6 @@ links:
       show: false
       href: http://www.last.fm/user/YOUR_LASTFM_USERNAME
       icon: fab fa-lastfm
-  - github:
-      name: GitHub
-      show: true
-      href: https://github.com/alexsandre
-      icon: fab fa-github
   - codepen:
       name: CodePen
       show: false
