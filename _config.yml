@@ -28,7 +28,7 @@ robots:
     crawl: index,follow
 
 # website address when deployed, also given as canonical link
-url: https://tsjensen.github.io/fuse-core/
+url: http://www.alexsandre.com.br/
 
 # The 'baseurl' is prepended to all website-internal links.
 # 'baseurl' will often be '', but for a project page on gh-pages, it needs to be the project name.
@@ -133,6 +133,11 @@ links:
       show: true
       href: mailto:alexsandrer@gmail.com
       icon: fas fa-envelope
+  - unsplash:
+      name: Unsplash
+      show: true
+      href: https://unsplash.com/@alexsandrealmeida
+      icon: fas fa-unsplash
 
 
 # Extra HTML which will be displayed below the links. Keep it short. Leave empty to disable.
