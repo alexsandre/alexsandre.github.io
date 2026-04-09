@@ -1,0 +1,484 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const stack = {
+  backend: ['C#', '.NET Core', 'ASP.NET', 'Web API', 'Golang', 'Node.js', 'Entity Framework', 'NHibernate'],
+  dados: ['SQL Server', 'MySQL', 'Oracle', 'MongoDB', 'Redis', 'RabbitMQ', 'Elasticsearch', 'SQLite'],
+  infra: ['AWS (S3, RDS, Lambda)', 'SES · SQS', 'Docker', 'Kubernetes', 'Azure DevOps', 'SonarQube'],
+  frontend: ['Angular', 'React', 'Next.js', 'NUnit', 'xUnit', 'Moq', 'Selenium'],
+};
+
+const experiencias = [
+  {
+    role: 'Desenvolvedor de Software',
+    company: 'Ministério Público do ES (MPES)',
+    period: 'abr 2015 – atualmente',
+    desc: '13 projetos internos. Criação da lib MNI (.NET/C#) para integração entre órgãos do judiciário, microsserviço em Golang para Reporting Services, configuração de apps em Kubernetes e PWA.',
+    tech: ['C#', '.NET', 'Golang', 'Kubernetes', 'Angular', 'React', 'RabbitMQ', 'MongoDB', 'Elasticsearch'],
+  },
+  {
+    role: 'Desenvolvedor de Software Sênior',
+    company: 'Eclipseworks → Banco Master',
+    period: 'mar 2024 – nov 2025',
+    desc: 'Alocado no Banco Master na equipe de Backoffice Desconto em Folha. Responsável por integrações com averbadoras, outros bancos e implementação do padrão CNAB240.',
+    tech: ['.NET Core', 'C#', 'AWS', 'Angular', 'SQL Server', 'Docker', 'xUnit', 'SonarQube'],
+  },
+  {
+    role: 'Desenvolvedor de Software',
+    company: 'Wakke (part-time)',
+    period: 'jun 2021 – ago 2023',
+    desc: 'Backend de plataforma SaaS de gestão escolar. Reformulação do fluxo de cobrança, integração com pagar.me e resolução de gargalos no envio de e-mails via AWS SES.',
+    tech: ['.NET Core', 'C#', 'MariaDB', 'AWS SES/SQS/S3', 'Redis', 'Docker', 'Azure DevOps'],
+  },
+  {
+    role: 'Desenvolvedor de Software',
+    company: 'SPASSU → Petrobras',
+    period: 'jul 2011 – abr 2015',
+    desc: 'Alocado na Petrobras. Desenvolvimento e manutenção de sistemas ASP.NET com Oracle, testes unitários, métricas de qualidade e scripts WMI para monitoramento de performance do IIS.',
+    tech: ['.NET', 'C#', 'Oracle', 'NHibernate', 'ASP.NET MVC', 'SonarQube', 'Selenium'],
+  },
+  {
+    role: 'Analista de Sistemas Jr',
+    company: 'Infosis Consultoria e Sistemas → BANDES',
+    period: 'dez 2006 – jul 2011',
+    desc: 'Início de carreira alocado no BANDES. Desenvolvimento em Delphi e migração progressiva para .NET/C#. Criação do módulo de Gestão Eletrônica de Documentos (GED) e análise de migração de Delphi/COM+ para .NET Framework.',
+    tech: ['Delphi', 'C#', '.NET Framework', 'ASP.NET MVC', 'SQL Server', 'COM+', 'WCF', 'Crystal Reports'],
+  },
+];
+
+const educacao = [
+  { degree: 'Curso de Extensão – Engenharia de Software Moderna', inst: 'UFMG', year: '2024' },
+  { degree: 'Pós-graduação em Engenharia de Software', inst: 'PUC Minas', year: '2021 – 2022' },
+  { degree: 'Graduação em Sistemas de Informação', inst: 'UVV – Centro Universitário Vila Velha', year: '2004 – 2008' },
+  { degree: 'MCSD · MCTS · Programming in C# (e outros 6)', inst: 'Microsoft Certifications', year: 'múltiplos anos' },
+];
+---
+
+<Layout>
+  <div class="pf">
+
+    <nav class="pf-nav">
+      <span class="pf-nav-logo">alexsandre.dev</span>
+      <ul class="pf-nav-links">
+        <li><a href="#sobre">sobre</a></li>
+        <li><a href="#experiencia">experiência</a></li>
+        <li><a href="#stack">stack</a></li>
+        <li><a href="#contato">contato</a></li>
+      </ul>
+    </nav>
+
+    <section class="pf-hero" id="sobre">
+      <div>
+        <p class="pf-hero-tag">backend · .net · cloud · infra</p>
+        <h1 class="pf-hero-name">Alexsandre<br /><em>Almeida</em></h1>
+        <p class="pf-hero-desc">
+          Software Engineer com mais de 15 anos de experiência em back-end.
+          Especialista em .NET e C#, com passagem por bancos, governo, SaaS e Petrobras.
+          Foco em APIs, integrações, pipelines e infraestrutura.
+        </p>
+        <span class="pf-years-badge">+ 15 anos de experiência</span>
+      </div>
+      <div class="pf-hero-meta">
+        <p class="pf-hero-meta-item">base <span>Vitória, ES</span></p>
+        <p class="pf-hero-meta-item">foco <span>.NET · C# · Cloud</span></p>
+        <p class="pf-hero-meta-item">idiomas <span>PT · EN intermediário</span></p>
+        <p class="pf-hero-meta-item">contato <span>alexsandrer@gmail.com</span></p>
+        <p class="pf-status"><span class="pf-dot"></span>aberto a oportunidades</p>
+      </div>
+    </section>
+
+    <section class="pf-section" id="stack">
+      <p class="pf-section-label">stack</p>
+      <div class="pf-stack-grid">
+        <div class="pf-stack-cell">
+          <p class="pf-stack-cell-label">backend</p>
+          <div class="pf-stack-tags">
+            {stack.backend.map(t => <span class="pf-tag">{t}</span>)}
+          </div>
+        </div>
+        <div class="pf-stack-cell">
+          <p class="pf-stack-cell-label">dados & mensageria</p>
+          <div class="pf-stack-tags">
+            {stack.dados.map(t => <span class="pf-tag">{t}</span>)}
+          </div>
+        </div>
+        <div class="pf-stack-cell">
+          <p class="pf-stack-cell-label">cloud & infra</p>
+          <div class="pf-stack-tags">
+            {stack.infra.map(t => <span class="pf-tag">{t}</span>)}
+          </div>
+        </div>
+        <div class="pf-stack-cell">
+          <p class="pf-stack-cell-label">frontend & testes</p>
+          <div class="pf-stack-tags">
+            {stack.frontend.map(t => <span class="pf-tag">{t}</span>)}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pf-section" id="experiencia">
+      <p class="pf-section-label">experiência</p>
+      <div class="pf-exp-list">
+        {experiencias.map(exp => (
+          <div class="pf-exp-item">
+            <div class="pf-exp-header">
+              <div>
+                <p class="pf-exp-role">{exp.role}</p>
+                <p class="pf-exp-company">{exp.company}</p>
+              </div>
+              <span class="pf-exp-period">{exp.period}</span>
+            </div>
+            <p class="pf-exp-desc">{exp.desc}</p>
+            <div class="pf-exp-tech">
+              {exp.tech.map(t => <span class="pf-tech-pill">{t}</span>)}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="pf-section">
+      <p class="pf-section-label">educação</p>
+      <div class="pf-edu-grid">
+        {educacao.map(e => (
+          <div class="pf-edu-item">
+            <p class="pf-edu-degree">{e.degree}</p>
+            <p class="pf-edu-inst">{e.inst}</p>
+            <p class="pf-edu-year">{e.year}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="pf-section" id="contato">
+      <p class="pf-section-label">contato</p>
+      <div class="pf-contact-row">
+        <a class="pf-contact-link" href="mailto:alexsandrer@gmail.com">alexsandrer@gmail.com</a>
+        <a class="pf-contact-link" href="https://linkedin.com/in/alexsandrealmeida" target="_blank" rel="noopener">linkedin</a>
+        <a class="pf-contact-link" href="https://github.com/alexsandre" target="_blank" rel="noopener">github</a>
+        <a class="pf-contact-link" href="tel:+5527981460762">(27) 98146-0762</a>
+      </div>
+    </section>
+
+  </div>
+</Layout>
+
+<style>
+  .pf {
+    font-family: var(--font-mono);
+    background: var(--bg-tertiary);
+  }
+
+  .pf-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 0.5px solid var(--border);
+    background: var(--bg-primary);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .pf-nav-logo {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    letter-spacing: 0.04em;
+  }
+
+  .pf-nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .pf-nav-links a {
+    font-size: 12px;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+    transition: color 0.15s;
+  }
+
+  .pf-nav-links a:hover { color: var(--text-primary); }
+
+  .pf-hero {
+    padding: 3.5rem 2rem 3rem;
+    background: var(--bg-primary);
+    border-bottom: 0.5px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: end;
+  }
+
+  .pf-hero-tag {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .pf-hero-name {
+    font-family: var(--font-serif);
+    font-size: 44px;
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+  }
+
+  .pf-hero-name em {
+    font-style: italic;
+    color: var(--text-secondary);
+  }
+
+  .pf-hero-desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 500px;
+  }
+
+  .pf-hero-meta { text-align: right; }
+
+  .pf-hero-meta-item {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4rem;
+  }
+
+  .pf-hero-meta-item span { color: var(--text-secondary); }
+
+  .pf-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: inline-block;
+  }
+
+  .pf-status {
+    font-size: 11px;
+    color: var(--accent-dark);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: flex-end;
+    margin-top: 0.75rem;
+  }
+
+  .pf-years-badge {
+    display: inline-block;
+    font-size: 11px;
+    background: var(--bg-secondary);
+    border: 0.5px solid var(--border-strong);
+    border-radius: 3px;
+    padding: 3px 10px;
+    color: var(--text-secondary);
+    margin-top: 0.75rem;
+  }
+
+  .pf-section {
+    padding: 2.5rem 2rem;
+    border-bottom: 0.5px solid var(--border);
+    background: var(--bg-primary);
+  }
+
+  .pf-section-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .pf-section-label::after {
+    content: '';
+    flex: 1;
+    height: 0.5px;
+    background: var(--border);
+  }
+
+  .pf-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    border: 0.5px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .pf-stack-cell {
+    padding: 1rem 1.25rem;
+    background: var(--bg-secondary);
+  }
+
+  .pf-stack-cell-label {
+    font-size: 10px;
+    color: var(--text-tertiary);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+
+  .pf-stack-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .pf-tag {
+    font-size: 10px;
+    color: var(--text-secondary);
+    background: var(--bg-primary);
+    border: 0.5px solid var(--border-strong);
+    border-radius: 3px;
+    padding: 2px 7px;
+    letter-spacing: 0.03em;
+  }
+
+  .pf-exp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border: 0.5px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .pf-exp-item {
+    padding: 1.25rem;
+    background: var(--bg-secondary);
+  }
+
+  .pf-exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+
+  .pf-exp-role {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+
+  .pf-exp-company {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+  }
+
+  .pf-exp-period {
+    font-size: 10px;
+    color: var(--text-tertiary);
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .pf-exp-desc {
+    font-size: 11px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+
+  .pf-exp-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .pf-tech-pill {
+    font-size: 10px;
+    color: var(--pill-text);
+    background: var(--pill-bg);
+    border-radius: 2px;
+    padding: 1px 6px;
+    letter-spacing: 0.02em;
+  }
+
+  .pf-edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    border: 0.5px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .pf-edu-item {
+    padding: 1rem 1.25rem;
+    background: var(--bg-secondary);
+  }
+
+  .pf-edu-degree {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .pf-edu-inst {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-bottom: 0.2rem;
+  }
+
+  .pf-edu-year {
+    font-size: 10px;
+    color: var(--text-tertiary);
+  }
+
+  .pf-contact-row {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .pf-contact-link {
+    font-size: 12px;
+    color: var(--text-secondary);
+    letter-spacing: 0.04em;
+    transition: color 0.15s;
+  }
+
+  .pf-contact-link:hover { color: var(--text-primary); }
+
+  @media (max-width: 768px) {
+    .pf-hero {
+      grid-template-columns: 1fr;
+    }
+    .pf-hero-meta {
+      text-align: left;
+    }
+    .pf-status {
+      justify-content: flex-start;
+    }
+    .pf-stack-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .pf-nav-links {
+      gap: 1rem;
+    }
+    .pf-contact-row {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .pf-hero-name { font-size: 32px; }
+    .pf-stack-grid { grid-template-columns: 1fr; }
+    .pf-edu-grid { grid-template-columns: 1fr; }
+    .pf-exp-header { flex-direction: column; gap: 0.25rem; }
+  }
+</style>
